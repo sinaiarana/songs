@@ -10,6 +10,10 @@ if not os.path.exists(FILE_PATH):
     with open(FILE_PATH, "w") as file:
         json.dump({}, file)
 
+@app.route("/")
+def home():
+    return jsonify({"message": "Welcome to the Flask API!"})
+
 # Endpoint to update song data
 @app.route("/update_song", methods=["POST"])
 def update_song():
