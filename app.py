@@ -1,9 +1,7 @@
 from flask import Flask, request, jsonify
 import os
 import json
-from flask_cors import CORS
 
-CORS(app)
 app = Flask(__name__)
 FILE_PATH = "songs.json"
 
